@@ -8246,11 +8246,36 @@ aside .accordion {
         .describe-columns > div.add > div > a:hover {
           color: #32a6ba; }
 
-body.viewer h2 {
+body.viewer .share-page {
+  float: right;
+  width: 26px;
+  color: #2a2d34; }
+  body.viewer .share-page svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor; }
+    body.viewer .share-page svg + span {
+      font: 0/0 a;
+      color: transparent;
+      text-shadow: none;
+      background-color: transparent;
+      border: 0; }
+body.viewer .package-title {
   border-bottom: solid 1px #e6e6e6;
   font-size: 22px;
   margin-top: 0;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  padding-bottom: 6px; }
+  body.viewer .package-title svg {
+    fill: currentColor;
+    width: 26px;
+    height: 26px;
+    float: left;
+    position: relative;
+    top: -1px; }
+    body.viewer .package-title svg + span {
+      display: block;
+      margin-left: 32px; }
 body.viewer .description {
   font-size: 15px;
   margin-bottom: 30px; }
@@ -8295,6 +8320,49 @@ body.viewer .table-view {
     font-size: 13px; }
   body.viewer .table-view table tr:hover td {
     background-color: rgba(50, 166, 186, 0.1); }
+
+.visualisation-selection {
+  display: block;
+  padding: 0;
+  margin: 0 -10px; }
+  .visualisation-selection:before, .visualisation-selection:after {
+    content: " ";
+    display: table; }
+  .visualisation-selection:after {
+    clear: both; }
+  .visualisation-selection li {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    line-height: 1; }
+    @media (min-width: 768px) {
+      .visualisation-selection li {
+        float: left;
+        width: 20%; } }
+    .visualisation-selection li svg {
+      fill: currentColor;
+      width: 100%;
+      height: 64px;
+      display: block;
+      margin-bottom: 4px; }
+    .visualisation-selection li a {
+      display: block;
+      border: solid 1px rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      text-decoration: none;
+      overflow: hidden;
+      font-weight: normal; }
+      @media (min-width: 768px) {
+        .visualisation-selection li a {
+          height: 113px;
+          padding-bottom: 0; } }
+      .visualisation-selection li a.disabled {
+        color: rgba(255, 255, 255, 0.3); }
+        .visualisation-selection li a.disabled svg {
+          fill: rgba(255, 255, 255, 0.1); }
+      .visualisation-selection li a:not(.disabled):hover {
+        color: #32a6ba;
+        border-color: #32a6ba; }
 
 .admin .app-container > aside .user {
   padding: 30px 20px;
@@ -8759,6 +8827,13 @@ body.viewer .table-view {
     font-size: 0.9em;
     color: rgba(255, 255, 255, 0.6);
     padding: 15px 30px 0 30px; }
+    .modal-content .modal-footer svg {
+      fill: currentColor;
+      width: 22px;
+      height: 22px;
+      position: relative;
+      display: inline-block;
+      top: 5px; }
   .modal-content .help-block {
     color: rgba(255, 255, 255, 0.6); }
   .modal-content .close {
